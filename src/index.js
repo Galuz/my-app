@@ -2,13 +2,12 @@ import React from 'react';
 import { render } from 'react-dom'
 import './index.css';
 import './style.css';
-//import Member from './ui/Member';
-import MemberList from './ui/MemberList';
+import routes from './components/routes';
 
 
 window.React = React
 
 render(
-	<MemberList />, 
+	routes, 
 	document.getElementById('react-container'))
 
