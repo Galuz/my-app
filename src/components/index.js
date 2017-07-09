@@ -1,19 +1,31 @@
 import MainMenu from './ui/MainMenu'
+import React, { Component } from 'react';
 
-export const Left = ({ children }) => 
-	<div className="page">
-		<MainMenu className="main-menu"/>
-		{children}
-	</div>
+class Warning extends Components{
 
-export const Right = ({ children }) => 
-	<div className="page">
-		{children}
-		<MainMenu className="main-menu"/>
-	</div>
+	render(){
+		
+		const  Left = {left} = this.props
+		const Right = {right} = this.props
+		const Whoops404 = {location} = this.props
 
-export const Whoops404 = ({ location }) =>
-    <div>
-        <h1>Whoops, resource not found</h1>
-        <p>Could not find {location.pathname}</p>
-    </div>
+		return(
+
+			<div className="page">
+				<MainMenu className="main-menu"/>
+				{left}
+			</div>
+
+			<div className="page">
+				{right}
+				<MainMenu className="main-menu"/>
+			</div>
+
+			<div>
+        		<h1>Whoops, resource not found</h1>
+        		<p>Could not find {location.pathname}</p>
+    		</div>
+		)
+	}
+}
+

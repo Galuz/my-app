@@ -1,9 +1,9 @@
 import React from 'react'
 import { Router, Route, hashHistory } from 'react-router'
-import Home from './ui/Home'
-import About from './ui/About'
-import MemberList from './ui/MemberList'
-import  { Left, Right, Whoops404  } from './index'
+import Home from './components/ui/Home'
+import About from './components/ui/About'
+import MemberList from './components/ui/MemberList'
+import  { Left, Right, Whoops404  } from './components'
 
 const routes = (
     <Router history={hashHistory}>
